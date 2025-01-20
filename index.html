@@ -1,1 +1,1590 @@
-Hello world
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="AI-generated website">
+      <meta name="theme-color" content="#ffffff">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="robots" content="index, follow">
+      
+      <!-- Performance optimization: Preload critical resources -->
+      <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+      <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" as="style">
+      
+      <!-- {headerScripts} -->
+
+      <!-- Core CSS -->
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+             colors: {
+                primary: {
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3',
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+                secondary: {
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3',
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+                accent: {
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3',
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+              },
+              fontFamily: {
+                sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                heading: ['Montserrat', 'Inter', 'system-ui', 'sans-serif'],
+              },
+              spacing: {
+                '18': '4.5rem',
+                '22': '5.5rem',
+                '30': '7.5rem',
+              },
+              maxWidth: {
+                '8xl': '88rem',
+                '9xl': '96rem',
+              },
+              animation: {
+                'fade-in': 'fadeIn 0.5s ease-in',
+                'fade-out': 'fadeOut 0.5s ease-out',
+                'slide-up': 'slideUp 0.5s ease-out',
+                'slide-down': 'slideDown 0.5s ease-out',
+                'slide-left': 'slideLeft 0.5s ease-out',
+                'slide-right': 'slideRight 0.5s ease-out',
+                'scale-in': 'scaleIn 0.5s ease-out',
+                'scale-out': 'scaleOut 0.5s ease-out',
+                'spin-slow': 'spin 3s linear infinite',
+                'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                'bounce-slow': 'bounce 3s infinite',
+                'float': 'float 3s ease-in-out infinite',
+              },
+              keyframes: {
+                fadeIn: {
+                  '0%': { opacity: '0' },
+                  '100%': { opacity: '1' },
+                },
+                fadeOut: {
+                  '0%': { opacity: '1' },
+                  '100%': { opacity: '0' },
+                },
+                slideUp: {
+                  '0%': { transform: 'translateY(20px)', opacity: '0' },
+                  '100%': { transform: 'translateY(0)', opacity: '1' },
+                },
+                slideDown: {
+                  '0%': { transform: 'translateY(-20px)', opacity: '0' },
+                  '100%': { transform: 'translateY(0)', opacity: '1' },
+                },
+                slideLeft: {
+                  '0%': { transform: 'translateX(20px)', opacity: '0' },
+                  '100%': { transform: 'translateX(0)', opacity: '1' },
+                },
+                slideRight: {
+                  '0%': { transform: 'translateX(-20px)', opacity: '0' },
+                  '100%': { transform: 'translateX(0)', opacity: '1' },
+                },
+                scaleIn: {
+                  '0%': { transform: 'scale(0.9)', opacity: '0' },
+                  '100%': { transform: 'scale(1)', opacity: '1' },
+                },
+                scaleOut: {
+                  '0%': { transform: 'scale(1.1)', opacity: '0' },
+                  '100%': { transform: 'scale(1)', opacity: '1' },
+                },
+                float: {
+                  '0%, 100%': { transform: 'translateY(0)' },
+                  '50%': { transform: 'translateY(-10px)' },
+                },
+              },
+              aspectRatio: {
+                'portrait': '3/4',
+                'landscape': '4/3',
+                'ultrawide': '21/9',
+              },
+            },
+          },
+          variants: {
+            extend: {
+              opacity: ['disabled'],
+              cursor: ['disabled'],
+              backgroundColor: ['active', 'disabled'],
+              textColor: ['active', 'disabled'],
+            },
+          },
+        }
+      </script>
+
+      <!-- Utilities and Components -->
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.3/cdn.min.js"></script>
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.45.1/apexcharts.min.js"></script>
+      
+      <!-- Optimized Font Loading -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+      
+      <!-- Icons -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+            integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+      <!-- Base Styles -->
+      <style>
+
+      * {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+/* Webkit browsers like Chrome, Safari, newer Edge */
+*::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+          width: 0px;
+        }
+        
+        ::-webkit-scrollbar-track {
+          background: #f1f1f1;
+          border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+          background: #888;
+          border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+          background: #666;
+        }
+
+        /* Remove tap highlight on mobile */
+        * {
+          -webkit-tap-highlight-color: transparent;
+        }
+
+        /* Improve text rendering */
+        body {
+          text-rendering: optimizeLegibility;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Focus outline styles */
+        :focus-visible {
+          outline: 2px solid currentColor;
+          outline-offset: 2px;
+        }
+
+        /* Print styles */
+        @media print {
+          .no-print {
+            display: none !important;
+          }
+          
+          a[href]:after {
+            content: " (" attr(href) ")";
+          }
+        }
+      </style>
+
+      <!-- Enhanced Image Handler -->
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                const img = entry.target;
+                if (img.dataset.src) {
+                  const tempImage = new Image();
+                  tempImage.onload = () => {
+                    img.src = img.dataset.src;
+                    img.classList.remove('opacity-0');
+                    img.classList.add('opacity-100');
+                  };
+                  tempImage.src = img.dataset.src;
+                  img.removeAttribute('data-src');
+                  observer.unobserve(img);
+                }
+              }
+            });
+          }, {
+            rootMargin: '50px 0px',
+            threshold: 0.01
+          });
+
+          const loadImage = (img) => {
+            if ('loading' in HTMLImageElement.prototype) {
+              img.loading = 'lazy';
+            }
+            
+            img.classList.add('transition-opacity', 'duration-300', 'opacity-0');
+            
+            img.onerror = () => {
+              const width = img.getAttribute('width') || img.clientWidth || 300;
+              const height = img.getAttribute('height') || img.clientHeight || 200;
+              img.src = `https://placehold.co/${width}x${height}/DEDEDE/555555?text=Image+Unavailable`;
+              img.alt = 'Image unavailable';
+              img.classList.remove('opacity-0');
+              img.classList.add('opacity-100', 'error-image');
+            };
+
+            if (img.dataset.src) {
+              imageObserver.observe(img);
+            } else {
+              img.classList.remove('opacity-0');
+              img.classList.add('opacity-100');
+            }
+          };
+
+          document.querySelectorAll('img[data-src], img:not([data-src])').forEach(loadImage);
+
+          // Watch for dynamically added images
+          new MutationObserver((mutations) => {
+            mutations.forEach(mutation => {
+              mutation.addedNodes.forEach(node => {
+                if (node.nodeType === 1) {
+                  if (node.tagName === 'IMG') {
+                    loadImage(node);
+                  }
+                  node.querySelectorAll('img').forEach(loadImage);
+                }
+              });
+            });
+          }).observe(document.body, {
+            childList: true,
+            subtree: true
+          });
+        });
+
+        // Performance monitoring
+        if ('performance' in window && 'PerformanceObserver' in window) {
+          // Create performance observer
+          const observer = new PerformanceObserver((list) => {
+            const entries = list.getEntries();
+            entries.forEach((entry) => {
+              if (entry.entryType === 'largest-contentful-paint') {
+                // console.log(`LCP: ${entry.startTime}ms`);
+              }
+              if (entry.entryType === 'first-input') {
+                // console.log(`FID: ${entry.processingStart - entry.startTime}ms`);
+              }
+              if (entry.entryType === 'layout-shift') {
+                // console.log(`CLS: ${entry.value}`);
+              }
+            });
+          });
+
+          // Observe performance metrics
+          observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
+
+          // Log basic performance metrics
+          window.addEventListener('load', () => {
+            const timing = performance.getEntriesByType('navigation')[0];
+            console.log({
+              'DNS Lookup': timing.domainLookupEnd - timing.domainLookupStart,
+              'TCP Connection': timing.connectEnd - timing.connectStart,
+              'DOM Content Loaded': timing.domContentLoadedEventEnd - timing.navigationStart,
+              'Page Load': timing.loadEventEnd - timing.navigationStart
+            });
+          });
+        }
+
+        // Handle offline/online status
+        window.addEventListener('online', () => {
+          document.body.classList.remove('offline');
+          console.log('Connection restored');
+        });
+        
+        window.addEventListener('offline', () => {
+          document.body.classList.add('offline');
+          console.log('Connection lost');
+        });
+      </script>
+   </head>
+   <body class="antialiased text-gray-800 min-h-screen flex flex-col">
+      <!-- Skip to main content link for accessibility -->
+      <a href="#main-content" 
+         class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:p-4 focus:bg-white focus:text-black">
+         Skip to main content
+      </a>
+
+      <!-- Header -->
+      <header class="relative z-50 bg-white dark:bg-gray-900">
+        <!-- Header content goes here -->
+      </header>
+
+      <!-- Main content area -->
+      <main id="main-content" class="flex-1 relative ">
+        <!-- Content will be injected here -->
+      </main>
+
+      <!-- {bodyScripts} -->
+
+   </body>
+</html><element id="e7bef394-e528-43e5-b93f-fee078c2faad" data-section-id="e7bef394-e528-43e5-b93f-fee078c2faad">
+
+<htmlCode>
+<div id="root" class="min-h-screen bg-[#E5E7EB]">
+    <div class="flex">
+        <!-- Sidebar Navigation -->
+        <nav class="fixed h-screen w-64 bg-white border-r border-neutral-200/20 hidden lg:block">
+            <div class="flex flex-col h-full">
+                <!-- Logo -->
+                <div class="p-6 border-b border-neutral-200/20">
+                    <div class="flex items-center space-x-2">
+                        <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        <span class="text-xl font-semibold">TimeSync</span>
+                    </div>
+                </div>
+
+                <!-- Navigation Links -->
+                <div class="flex-1 overflow-y-auto py-4">
+                    <a href="#calendar" class="flex items-center px-6 py-3 text-gray-600 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200 active">
+                        <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                        </svg>
+                        Calendar
+                    </a>
+                    <a href="#events" class="flex items-center px-6 py-3 text-gray-600 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200">
+                        <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                        Events
+                    </a>
+                    <a href="#timezones" class="flex items-center px-6 py-3 text-gray-600 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200">
+                        <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"/>
+                        </svg>
+                        Timezones
+                    </a>
+                    <a href="#settings" class="flex items-center px-6 py-3 text-gray-600 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200">
+                        <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                        </svg>
+                        Settings
+                    </a>
+                </div>
+
+                <!-- User Profile -->
+                <div class="p-6 border-t border-neutral-200/20">
+                    <div class="flex items-center">
+                        <img src="https://avatar.iran.liara.run/public" alt="User" class="w-8 h-8 rounded-full"/>
+                        <div class="ml-3">
+                            <p class="text-sm font-medium text-gray-700">John Doe</p>
+                            <p class="text-xs text-gray-500">john@example.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Mobile Header -->
+        <div class="lg:hidden fixed top-0 left-0 right-0 h-16 bg-white border-b border-neutral-200/20 z-50">
+            <div class="flex items-center justify-between px-4 h-full">
+                <div class="flex items-center space-x-2">
+                    <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span class="text-xl font-semibold">TimeSync</span>
+                </div>
+                <button type="button" class="text-gray-500 hover:text-gray-600 focus:outline-none focus:text-gray-600" aria-label="toggle menu">
+                    <svg viewBox="0 0 24 24" class="h-6 w-6 fill-current">
+                        <path fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Main Content Area -->
+        <main class="flex-1 ml-0 lg:ml-64 min-h-screen overflow-y-auto bg-[#E5E7EB]">
+            <div class="mx-auto px-4 py-8 mt-16 lg:mt-0">
+                <MountPoint>
+
+<!-- JavaScript for Active State Management -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Get all navigation links
+    const navLinks = document.querySelectorAll('nav a');
+    
+    // Function to update active state
+    function updateActiveState() {
+        const hash = window.location.hash || '#calendar';
+        navLinks.forEach(link => {
+            if(link.getAttribute('href') === hash) {
+                link.classList.add('active');
+                link.classList.add('bg-blue-50', 'text-blue-600');
+            } else {
+                link.classList.remove('active');
+                link.classList.remove('bg-blue-50', 'text-blue-600');
+            }
+        });
+    }
+
+    // Add click event listeners
+    navLinks.forEach(link => {
+        link.addEventListener('click', updateActiveState);
+    });
+
+    // Listen for hash changes
+    window.addEventListener('hashchange', updateActiveState);
+
+    // Initial state
+    updateActiveState();
+});
+
+// Mobile menu toggle
+document.querySelector('button[aria-label="toggle menu"]').addEventListener('click', function() {
+    const nav = document.querySelector('nav');
+    nav.classList.toggle('hidden');
+});
+</script>
+
+<style>
+    html {
+        scroll-behavior: smooth;
+    }
+    
+    .active {
+        background-color: #EBF5FF;
+        color: #2563EB;
+    }
+
+    @media (max-width: 1024px) {
+        nav {
+            transform: translateX(-100%);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        nav.show {
+            transform: translateX(0);
+        }
+    }
+</style></element><element id="7b1f473d-9fed-431b-a1e2-ec50e97e20e9" data-section-id="7b1f473d-9fed-431b-a1e2-ec50e97e20e9">
+
+
+                      <htmlcode id="el-44z9rmap">
+<section id="calendar" class="p-6 bg-white rounded-lg border border-neutral-200/20">
+    <!-- Calendar Header -->
+    <div class="flex justify-between items-center mb-6">
+        <div class="flex items-center space-x-4">
+            <h2 class="text-2xl font-semibold text-gray-800">December 2023</h2>
+            <div class="flex space-x-2">
+                <button class="p-2 hover:bg-blue-50 rounded-lg transition-colors duration-200">
+                    <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                    </svg>
+                </button>
+                <button class="p-2 hover:bg-blue-50 rounded-lg transition-colors duration-200">
+                    <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="flex items-center space-x-4">
+            <button class="px-4 py-2 text-sm font-medium text-blue-600 hover:bg-blue-50 rounded-lg transition-colors duration-200">Today</button>
+            <select class="px-4 py-2 border border-neutral-200/20 rounded-lg text-sm text-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <option>Month</option>
+                <option>Week</option>
+                <option>Day</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Calendar Grid -->
+    <div class="border border-neutral-200/20 rounded-lg">
+        <!-- Days of Week -->
+        <div class="grid grid-cols-7 bg-gray-50 border-b border-neutral-200/20">
+            <div class="p-4 text-sm font-medium text-gray-600 text-center">Sun</div>
+            <div class="p-4 text-sm font-medium text-gray-600 text-center">Mon</div>
+            <div class="p-4 text-sm font-medium text-gray-600 text-center">Tue</div>
+            <div class="p-4 text-sm font-medium text-gray-600 text-center">Wed</div>
+            <div class="p-4 text-sm font-medium text-gray-600 text-center">Thu</div>
+            <div class="p-4 text-sm font-medium text-gray-600 text-center">Fri</div>
+            <div class="p-4 text-sm font-medium text-gray-600 text-center">Sat</div>
+        </div>
+
+        <!-- Calendar Days -->
+        <div class="grid grid-cols-7">
+            <!-- Previous Month -->
+            <div class="p-4 border-b border-r border-neutral-200/20">
+                <span class="text-gray-400">26</span>
+            </div>
+            <div class="p-4 border-b border-r border-neutral-200/20">
+                <span class="text-gray-400">27</span>
+            </div>
+            <div class="p-4 border-b border-r border-neutral-200/20">
+                <span class="text-gray-400">28</span>
+            </div>
+            <div class="p-4 border-b border-r border-neutral-200/20">
+                <span class="text-gray-400">29</span>
+            </div>
+            <div class="p-4 border-b border-r border-neutral-200/20">
+                <span class="text-gray-400">30</span>
+            </div>
+
+            <!-- Current Month -->
+            <div class="p-4 border-b border-r border-neutral-200/20">
+                <span class="text-gray-800">1</span>
+            </div>
+            <div class="p-4 border-b border-neutral-200/20">
+                <span class="text-gray-800">2</span>
+            </div>
+
+            <!-- Calendar Events Row -->
+            <div class="p-4 border-b border-r border-neutral-200/20">
+                <span class="text-gray-800">3</span>
+                <div class="mt-2">
+                    <div class="bg-blue-100 text-blue-800 text-xs rounded p-1 mb-1">9:00 AM Meeting</div>
+                </div>
+            </div>
+            <div class="p-4 border-b border-r border-neutral-200/20">
+                <span class="text-gray-800">4</span>
+            </div>
+            <div class="p-4 border-b border-r border-neutral-200/20">
+                <span class="text-gray-800">5</span>
+                <div class="mt-2">
+                    <div class="bg-green-100 text-green-800 text-xs rounded p-1">2:30 PM Call</div>
+                </div>
+            </div>
+            <div class="p-4 border-b border-r border-neutral-200/20">
+                <span class="text-gray-800">6</span>
+            </div>
+            <div class="p-4 border-b border-r border-neutral-200/20">
+                <span class="text-gray-800">7</span>
+            </div>
+            <div class="p-4 border-b border-r border-neutral-200/20">
+                <span class="text-gray-800">8</span>
+            </div>
+            <div class="p-4 border-b border-neutral-200/20">
+                <span class="text-gray-800">9</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Time Zone Selector -->
+    <div class="mt-6 flex items-center space-x-4">
+        <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 7v5l3 3"></path>
+        </svg>
+        <select class="px-4 py-2 border border-neutral-200/20 rounded-lg text-sm text-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <option>UTC (GMT+0)</option>
+            <option>Pacific Time (GMT-8)</option>
+            <option>Eastern Time (GMT-5)</option>
+            <option>Central European Time (GMT+1)</option>
+        </select>
+    </div>
+
+    <!-- Quick Add Event Button -->
+    <button class="fixed bottom-6 right-6 bg-blue-600 text-white rounded-full p-4 shadow-lg hover:bg-blue-700 transition-colors duration-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+        </svg>
+    </button>
+</section>
+</htmlcode>
+                    </element><element id="56943512-a0c1-435a-bca6-86f2347e9ce2" data-section-id="56943512-a0c1-435a-bca6-86f2347e9ce2">
+
+<htmlCode>
+<section id="events" class="p-6 bg-white rounded-lg border border-neutral-200/20">
+    <!-- Events Header -->
+    <div class="flex justify-between items-center mb-6">
+        <h2 class="text-2xl font-semibold text-gray-800">Events Management</h2>
+        <button class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200 flex items-center space-x-2">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
+            </svg>
+            <span>New Event</span>
+        </button>
+    </div>
+
+    <!-- Filters -->
+    <div class="flex space-x-4 mb-6">
+        <div class="flex-1">
+            <input type="text" placeholder="Search events..." class="w-full px-4 py-2 border border-neutral-200/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+        <select class="px-4 py-2 border border-neutral-200/20 rounded-lg text-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <option>All Events</option>
+            <option>Meetings</option>
+            <option>Reminders</option>
+            <option>Holidays</option>
+        </select>
+    </div>
+
+    <!-- Events List -->
+    <div class="space-y-4">
+        <!-- Today's Events -->
+        <div class="mb-6">
+            <h3 class="text-sm font-semibold text-gray-500 mb-4">TODAY - December 15, 2023</h3>
+            <div class="space-y-3">
+                <div class="p-4 border border-neutral-200/20 rounded-lg hover:bg-gray-50 transition-colors duration-200">
+                    <div class="flex items-start justify-between">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 text-center">
+                                <span class="text-sm font-medium text-gray-600">09:00</span>
+                                <span class="text-xs text-gray-400 block">10:30</span>
+                            </div>
+                            <div>
+                                <h4 class="text-base font-medium text-gray-800">Team Sync Meeting</h4>
+                                <p class="text-sm text-gray-600 mt-1">Weekly team sync with design and development teams</p>
+                                <div class="flex items-center space-x-3 mt-2">
+                                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+                                        Meeting
+                                    </span>
+                                    <span class="text-sm text-gray-500">GMT+1</span>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="text-gray-400 hover:text-gray-600">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="p-4 border border-neutral-200/20 rounded-lg hover:bg-gray-50 transition-colors duration-200">
+                    <div class="flex items-start justify-between">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 text-center">
+                                <span class="text-sm font-medium text-gray-600">14:00</span>
+                                <span class="text-xs text-gray-400 block">15:00</span>
+                            </div>
+                            <div>
+                                <h4 class="text-base font-medium text-gray-800">Client Presentation</h4>
+                                <p class="text-sm text-gray-600 mt-1">Project update presentation with stakeholders</p>
+                                <div class="flex items-center space-x-3 mt-2">
+                                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                                        Presentation
+                                    </span>
+                                    <span class="text-sm text-gray-500">GMT+1</span>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="text-gray-400 hover:text-gray-600">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tomorrow's Events -->
+        <div>
+            <h3 class="text-sm font-semibold text-gray-500 mb-4">TOMORROW - December 16, 2023</h3>
+            <div class="space-y-3">
+                <div class="p-4 border border-neutral-200/20 rounded-lg hover:bg-gray-50 transition-colors duration-200">
+                    <div class="flex items-start justify-between">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 text-center">
+                                <span class="text-sm font-medium text-gray-600">11:00</span>
+                                <span class="text-xs text-gray-400 block">12:00</span>
+                            </div>
+                            <div>
+                                <h4 class="text-base font-medium text-gray-800">Product Review</h4>
+                                <p class="text-sm text-gray-600 mt-1">Monthly product review and roadmap discussion</p>
+                                <div class="flex items-center space-x-3 mt-2">
+                                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-purple-100 text-purple-800">
+                                        Review
+                                    </span>
+                                    <span class="text-sm text-gray-500">GMT+1</span>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="text-gray-400 hover:text-gray-600">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sync Status -->
+    <div class="mt-6 flex items-center justify-between p-4 bg-gray-50 rounded-lg">
+        <div class="flex items-center space-x-2">
+            <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+            <span class="text-sm text-gray-600">All events synced</span>
+        </div>
+        <div class="flex items-center space-x-4">
+            <button class="text-sm text-blue-600 hover:text-blue-700">Sync with Google Calendar</button>
+            <button class="text-sm text-blue-600 hover:text-blue-700">Sync with Outlook</button>
+        </div>
+    </div>
+</section>
+</htmlCode></element><element id="b59d851a-f973-4c6b-9cd5-e1a8fff8aa3b" data-section-id="b59d851a-f973-4c6b-9cd5-e1a8fff8aa3b">
+
+<htmlCode>
+<section id="timezones" class="p-6 bg-white rounded-lg border border-neutral-200/20">
+    <!-- Timezone Header -->
+    <div class="flex justify-between items-center mb-6">
+        <h2 class="text-2xl font-semibold text-gray-800">Time Zones</h2>
+        <button class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200 flex items-center space-x-2">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
+            </svg>
+            <span>Add Location</span>
+        </button>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="mb-6">
+        <div class="relative">
+            <input type="text" placeholder="Search for a city or time zone..." class="w-full px-4 py-2 pl-10 border border-neutral-200/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <svg class="w-5 h-5 text-gray-400 absolute left-3 top-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+            </svg>
+        </div>
+    </div>
+
+    <!-- Current Location -->
+    <div class="mb-8 p-4 bg-blue-50 rounded-lg">
+        <div class="flex items-center justify-between">
+            <div>
+                <div class="flex items-center space-x-2">
+                    <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                    </svg>
+                    <span class="text-sm font-medium text-blue-600">Current Location</span>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 mt-1">New York, USA</h3>
+                <p class="text-gray-600">Eastern Time (ET)</p>
+            </div>
+            <div class="text-right">
+                <p class="text-3xl font-bold text-gray-800">14:30</p>
+                <p class="text-gray-600">UTC-5</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Saved Locations -->
+    <div class="space-y-4">
+        <div class="p-4 border border-neutral-200/20 rounded-lg hover:bg-gray-50 transition-colors duration-200">
+            <div class="flex justify-between items-center">
+                <div>
+                    <h3 class="text-lg font-medium text-gray-800">London, UK</h3>
+                    <p class="text-gray-600">Greenwich Mean Time (GMT)</p>
+                </div>
+                <div class="text-right">
+                    <p class="text-2xl font-semibold text-gray-800">19:30</p>
+                    <p class="text-gray-600">UTC+0</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="p-4 border border-neutral-200/20 rounded-lg hover:bg-gray-50 transition-colors duration-200">
+            <div class="flex justify-between items-center">
+                <div>
+                    <h3 class="text-lg font-medium text-gray-800">Tokyo, Japan</h3>
+                    <p class="text-gray-600">Japan Standard Time (JST)</p>
+                </div>
+                <div class="text-right">
+                    <p class="text-2xl font-semibold text-gray-800">04:30</p>
+                    <p class="text-gray-600">UTC+9</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="p-4 border border-neutral-200/20 rounded-lg hover:bg-gray-50 transition-colors duration-200">
+            <div class="flex justify-between items-center">
+                <div>
+                    <h3 class="text-lg font-medium text-gray-800">Sydney, Australia</h3>
+                    <p class="text-gray-600">Australian Eastern Time (AET)</p>
+                </div>
+                <div class="text-right">
+                    <p class="text-2xl font-semibold text-gray-800">06:30</p>
+                    <p class="text-gray-600">UTC+11</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Time Converter -->
+    <div class="mt-8 p-6 border border-neutral-200/20 rounded-lg">
+        <h3 class="text-lg font-semibold text-gray-800 mb-4">Time Converter</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+                <label class="block text-sm font-medium text-gray-600 mb-2">From</label>
+                <select class="w-full px-4 py-2 border border-neutral-200/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <option>New York (UTC-5)</option>
+                    <option>London (UTC+0)</option>
+                    <option>Tokyo (UTC+9)</option>
+                    <option>Sydney (UTC+11)</option>
+                </select>
+            </div>
+            <div>
+                <label class="block text-sm font-medium text-gray-600 mb-2">To</label>
+                <select class="w-full px-4 py-2 border border-neutral-200/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <option>London (UTC+0)</option>
+                    <option>New York (UTC-5)</option>
+                    <option>Tokyo (UTC+9)</option>
+                    <option>Sydney (UTC+11)</option>
+                </select>
+            </div>
+        </div>
+        <div class="mt-4">
+            <label class="block text-sm font-medium text-gray-600 mb-2">Time</label>
+            <input type="time" class="w-full px-4 py-2 border border-neutral-200/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+        <div class="mt-4 p-4 bg-gray-50 rounded-lg">
+            <p class="text-center text-gray-600">When it's <span class="font-semibold">14:30</span> in New York, it's <span class="font-semibold">19:30</span> in London</p>
+        </div>
+    </div>
+</section>
+</htmlCode></element><element id="9994f972-7832-48da-a4c4-6a31fa6fa6f1" data-section-id="9994f972-7832-48da-a4c4-6a31fa6fa6f1">
+
+<htmlCode>
+<section id="settings" class="p-6 bg-white rounded-lg border border-neutral-200/20">
+    <!-- Settings Header -->
+    <div class="mb-8">
+        <h2 class="text-2xl font-semibold text-gray-800">Settings</h2>
+        <p class="text-gray-600 mt-2">Manage your account preferences and app settings</p>
+    </div>
+
+    <!-- Settings Categories -->
+    <div class="space-y-8">
+        <!-- Appearance -->
+        <div class="border-b border-neutral-200/20 pb-6">
+            <h3 class="text-lg font-medium text-gray-800 mb-4">Appearance</h3>
+            <div class="space-y-4">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <h4 class="text-base font-medium text-gray-700">Theme</h4>
+                        <p class="text-sm text-gray-600">Choose your preferred theme</p>
+                    </div>
+                    <select class="px-4 py-2 border border-neutral-200/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <option>Light</option>
+                        <option>Dark</option>
+                        <option>System</option>
+                    </select>
+                </div>
+
+                <div class="flex items-center justify-between">
+                    <div>
+                        <h4 class="text-base font-medium text-gray-700">Calendar View</h4>
+                        <p class="text-sm text-gray-600">Default calendar view</p>
+                    </div>
+                    <select class="px-4 py-2 border border-neutral-200/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <option>Month</option>
+                        <option>Week</option>
+                        <option>Day</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- Time & Language -->
+        <div class="border-b border-neutral-200/20 pb-6">
+            <h3 class="text-lg font-medium text-gray-800 mb-4">Time & Language</h3>
+            <div class="space-y-4">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <h4 class="text-base font-medium text-gray-700">Default Time Zone</h4>
+                        <p class="text-sm text-gray-600">Set your primary time zone</p>
+                    </div>
+                    <select class="px-4 py-2 border border-neutral-200/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <option>UTC (GMT+0)</option>
+                        <option>Eastern Time (GMT-5)</option>
+                        <option>Pacific Time (GMT-8)</option>
+                    </select>
+                </div>
+
+                <div class="flex items-center justify-between">
+                    <div>
+                        <h4 class="text-base font-medium text-gray-700">Language</h4>
+                        <p class="text-sm text-gray-600">Choose display language</p>
+                    </div>
+                    <select class="px-4 py-2 border border-neutral-200/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <option>English</option>
+                        <option>Spanish</option>
+                        <option>French</option>
+                        <option>German</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- Notifications -->
+        <div class="border-b border-neutral-200/20 pb-6">
+            <h3 class="text-lg font-medium text-gray-800 mb-4">Notifications</h3>
+            <div class="space-y-4">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <h4 class="text-base font-medium text-gray-700">Email Notifications</h4>
+                        <p class="text-sm text-gray-600">Receive event reminders via email</p>
+                    </div>
+                    <button class="relative inline-flex items-center h-6 rounded-full w-11 bg-blue-600 focus:outline-none">
+                        <span class="translate-x-6 inline-block w-4 h-4 transform bg-white rounded-full"></span>
+                    </button>
+                </div>
+
+                <div class="flex items-center justify-between">
+                    <div>
+                        <h4 class="text-base font-medium text-gray-700">Push Notifications</h4>
+                        <p class="text-sm text-gray-600">Receive push notifications</p>
+                    </div>
+                    <button class="relative inline-flex items-center h-6 rounded-full w-11 bg-blue-600 focus:outline-none">
+                        <span class="translate-x-6 inline-block w-4 h-4 transform bg-white rounded-full"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Calendar Sync -->
+        <div class="border-b border-neutral-200/20 pb-6">
+            <h3 class="text-lg font-medium text-gray-800 mb-4">Calendar Synchronization</h3>
+            <div class="space-y-4">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center space-x-3">
+                        <svg class="w-6 h-6 text-red-500" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M20.283 10.356h-8.327v3.451h4.792c-.446 2.193-2.313 3.453-4.792 3.453a5.27 5.27 0 0 1-5.279-5.28 5.27 5.27 0 0 1 5.279-5.279c1.259 0 2.397.447 3.29 1.178l2.6-2.599c-1.584-1.381-3.615-2.233-5.89-2.233a8.908 8.908 0 0 0-8.934 8.934 8.907 8.907 0 0 0 8.934 8.934c4.467 0 8.529-3.249 8.529-8.934 0-.528-.081-1.097-.202-1.625z"/>
+                        </svg>
+                        <span class="text-base font-medium text-gray-700">Google Calendar</span>
+                    </div>
+                    <button class="px-4 py-2 text-sm text-blue-600 hover:bg-blue-50 rounded-lg transition-colors duration-200">
+                        Connect
+                    </button>
+                </div>
+
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center space-x-3">
+                        <svg class="w-6 h-6 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M21.333 4H2.667A1.667 1.667 0 001 5.667v12.666A1.667 1.667 0 002.667 20h18.666A1.667 1.667 0 0023 18.333V5.667A1.667 1.667 0 0021.333 4z"/>
+                        </svg>
+                        <span class="text-base font-medium text-gray-700">Outlook</span>
+                    </div>
+                    <button class="px-4 py-2 text-sm text-blue-600 hover:bg-blue-50 rounded-lg transition-colors duration-200">
+                        Connect
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Premium Features -->
+        <div class="pb-6">
+            <div class="flex items-center justify-between bg-blue-50 p-4 rounded-lg">
+                <div>
+                    <h3 class="text-lg font-medium text-gray-800">Premium Features</h3>
+                    <p class="text-sm text-gray-600 mt-1">Unlock advanced features and customization options</p>
+                </div>
+                <button class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200">
+                    Upgrade
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+</htmlCode></element><element id="9a625a3c-cb53-4560-8e7d-31da78e6a184" data-section-id="9a625a3c-cb53-4560-8e7d-31da78e6a184">
+
+<htmlCode>
+<section id="profile" class="p-6 bg-white rounded-lg border border-neutral-200/20">
+    <!-- Profile Header -->
+    <div class="mb-8">
+        <div class="flex items-center space-x-4">
+            <img src="https://avatar.iran.liara.run/public" alt="Profile" class="w-20 h-20 rounded-full border-2 border-blue-500">
+            <div>
+                <h2 class="text-2xl font-semibold text-gray-800">John Doe</h2>
+                <p class="text-gray-600">john.doe@example.com</p>
+                <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-800 mt-2">
+                    Premium Member
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Profile Information -->
+    <div class="space-y-8">
+        <!-- Personal Information -->
+        <div class="border-b border-neutral-200/20 pb-6">
+            <h3 class="text-lg font-medium text-gray-800 mb-4">Personal Information</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <label class="block text-sm font-medium text-gray-600 mb-2">Full Name</label>
+                    <input type="text" value="John Doe" class="w-full px-4 py-2 border border-neutral-200/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-600 mb-2">Email</label>
+                    <input type="email" value="john.doe@example.com" class="w-full px-4 py-2 border border-neutral-200/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-600 mb-2">Phone</label>
+                    <input type="tel" value="+1 (555) 123-4567" class="w-full px-4 py-2 border border-neutral-200/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-600 mb-2">Company</label>
+                    <input type="text" value="Tech Corp" class="w-full px-4 py-2 border border-neutral-200/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+            </div>
+        </div>
+
+        <!-- Subscription Details -->
+        <div class="border-b border-neutral-200/20 pb-6">
+            <h3 class="text-lg font-medium text-gray-800 mb-4">Subscription Details</h3>
+            <div class="bg-blue-50 p-4 rounded-lg">
+                <div class="flex items-center justify-between mb-4">
+                    <div>
+                        <h4 class="text-base font-medium text-gray-700">Premium Plan</h4>
+                        <p class="text-sm text-gray-600">Active until Dec 31, 2024</p>
+                    </div>
+                    <button class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200">
+                        Manage
+                    </button>
+                </div>
+                <div class="space-y-2">
+                    <div class="flex items-center text-sm text-gray-600">
+                        <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                        </svg>
+                        Custom Reminders
+                    </div>
+                    <div class="flex items-center text-sm text-gray-600">
+                        <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                        </svg>
+                        Priority Support
+                    </div>
+                    <div class="flex items-center text-sm text-gray-600">
+                        <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                        </svg>
+                        Ad-Free Experience
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Connected Accounts -->
+        <div class="border-b border-neutral-200/20 pb-6">
+            <h3 class="text-lg font-medium text-gray-800 mb-4">Connected Accounts</h3>
+            <div class="space-y-4">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center space-x-3">
+                        <svg class="w-6 h-6 text-red-500" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M20.283 10.356h-8.327v3.451h4.792c-.446 2.193-2.313 3.453-4.792 3.453a5.27 5.27 0 0 1-5.279-5.28 5.27 5.27 0 0 1 5.279-5.279c1.259 0 2.397.447 3.29 1.178l2.6-2.599c-1.584-1.381-3.615-2.233-5.89-2.233a8.908 8.908 0 0 0-8.934 8.934 8.907 8.907 0 0 0 8.934 8.934c4.467 0 8.529-3.249 8.529-8.934 0-.528-.081-1.097-.202-1.625z"/>
+                        </svg>
+                        <span class="text-gray-700">Google</span>
+                    </div>
+                    <span class="text-green-600 text-sm">Connected</span>
+                </div>
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center space-x-3">
+                        <svg class="w-6 h-6 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M21.333 4H2.667A1.667 1.667 0 001 5.667v12.666A1.667 1.667 0 002.667 20h18.666A1.667 1.667 0 0023 18.333V5.667A1.667 1.667 0 0021.333 4z"/>
+                        </svg>
+                        <span class="text-gray-700">Outlook</span>
+                    </div>
+                    <button class="text-blue-600 text-sm">Connect</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Actions -->
+        <div class="flex space-x-4">
+            <button class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200">
+                Save Changes
+            </button>
+            <button class="px-4 py-2 text-red-600 hover:bg-red-50 rounded-lg transition-colors duration-200">
+                Delete Account
+            </button>
+        </div>
+    </div>
+</section>
+</htmlCode></element><element id="0ebd933c-ace7-42ca-a895-0c164ecce57d" data-section-id="0ebd933c-ace7-42ca-a895-0c164ecce57d">
+
+<htmlCode>
+<section id="notifications" class="p-6 bg-white rounded-lg border border-neutral-200/20">
+    <!-- Notifications Header -->
+    <div class="flex justify-between items-center mb-6">
+        <div>
+            <h2 class="text-2xl font-semibold text-gray-800">Notifications</h2>
+            <p class="text-gray-600 mt-1">Your recent updates and alerts</p>
+        </div>
+        <div class="flex space-x-4">
+            <button class="text-blue-600 hover:text-blue-700">Mark all as read</button>
+            <button class="text-gray-600 hover:text-gray-700">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Notifications Filter -->
+    <div class="flex space-x-4 mb-6">
+        <button class="px-4 py-2 bg-blue-50 text-blue-600 rounded-lg hover:bg-blue-100 transition-colors duration-200">All</button>
+        <button class="px-4 py-2 text-gray-600 rounded-lg hover:bg-gray-50 transition-colors duration-200">Events</button>
+        <button class="px-4 py-2 text-gray-600 rounded-lg hover:bg-gray-50 transition-colors duration-200">Reminders</button>
+        <button class="px-4 py-2 text-gray-600 rounded-lg hover:bg-gray-50 transition-colors duration-200">System</button>
+    </div>
+
+    <!-- Notifications List -->
+    <div class="space-y-4">
+        <!-- Today -->
+        <div>
+            <h3 class="text-sm font-medium text-gray-500 mb-3">Today</h3>
+            
+            <div class="space-y-3">
+                <div class="p-4 bg-blue-50 rounded-lg">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 mt-1">
+                            <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <div class="ml-4 flex-1">
+                            <p class="text-sm font-medium text-gray-800">Upcoming Event Reminder</p>
+                            <p class="text-sm text-gray-600 mt-1">Team Meeting in 30 minutes</p>
+                            <p class="text-xs text-gray-500 mt-2">Just now</p>
+                        </div>
+                        <button class="text-gray-400 hover:text-gray-600">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="p-4 border border-neutral-200/20 rounded-lg">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 mt-1">
+                            <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <div class="ml-4 flex-1">
+                            <p class="text-sm font-medium text-gray-800">Calendar Sync Complete</p>
+                            <p class="text-sm text-gray-600 mt-1">Successfully synchronized with Google Calendar</p>
+                            <p class="text-xs text-gray-500 mt-2">2 hours ago</p>
+                        </div>
+                        <button class="text-gray-400 hover:text-gray-600">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Yesterday -->
+        <div>
+            <h3 class="text-sm font-medium text-gray-500 mb-3">Yesterday</h3>
+            
+            <div class="space-y-3">
+                <div class="p-4 border border-neutral-200/20 rounded-lg">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 mt-1">
+                            <svg class="w-5 h-5 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+                            </svg>
+                        </div>
+                        <div class="ml-4 flex-1">
+                            <p class="text-sm font-medium text-gray-800">Time Zone Changed</p>
+                            <p class="text-sm text-gray-600 mt-1">Your default time zone was updated to EST</p>
+                            <p class="text-xs text-gray-500 mt-2">Yesterday at 11:30 PM</p>
+                        </div>
+                        <button class="text-gray-400 hover:text-gray-600">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="p-4 border border-neutral-200/20 rounded-lg">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 mt-1">
+                            <svg class="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <div class="ml-4 flex-1">
+                            <p class="text-sm font-medium text-gray-800">Premium Feature Unlocked</p>
+                            <p class="text-sm text-gray-600 mt-1">You now have access to custom reminders</p>
+                            <p class="text-xs text-gray-500 mt-2">Yesterday at 3:45 PM</p>
+                        </div>
+                        <button class="text-gray-400 hover:text-gray-600">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- No Notifications State -->
+    <div class="hidden text-center py-12">
+        <svg class="mx-auto h-12 w-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
+        </svg>
+        <h3 class="mt-2 text-sm font-medium text-gray-900">No notifications</h3>
+        <p class="mt-1 text-sm text-gray-500">You're all caught up!</p>
+    </div>
+</section>
+</htmlCode></element><element id="a4f21fb5-543e-4d6c-8f3a-577dca85be31" data-section-id="a4f21fb5-543e-4d6c-8f3a-577dca85be31">
+
+<htmlCode>
+<section id="analytics" class="p-6 bg-white rounded-lg border border-neutral-200/20">
+    <!-- Analytics Header -->
+    <div class="flex justify-between items-center mb-6">
+        <div>
+            <h2 class="text-2xl font-semibold text-gray-800">Calendar Analytics</h2>
+            <p class="text-gray-600 mt-1">Monitor your calendar usage and activity</p>
+        </div>
+        <select class="px-4 py-2 border border-neutral-200/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <option>Last 30 Days</option>
+            <option>Last 7 Days</option>
+            <option>Last 3 Months</option>
+            <option>Last Year</option>
+        </select>
+    </div>
+
+    <!-- Stats Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+        <div class="p-6 border border-neutral-200/20 rounded-lg">
+            <div class="flex items-center justify-between mb-4">
+                <h3 class="text-sm font-medium text-gray-500">Total Events</h3>
+                <span class="text-blue-600">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                    </svg>
+                </span>
+            </div>
+            <p class="text-2xl font-semibold text-gray-800">248</p>
+            <p class="text-sm text-green-600 mt-2">↑ 12% vs last month</p>
+        </div>
+
+        <div class="p-6 border border-neutral-200/20 rounded-lg">
+            <div class="flex items-center justify-between mb-4">
+                <h3 class="text-sm font-medium text-gray-500">Meeting Hours</h3>
+                <span class="text-purple-600">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                </span>
+            </div>
+            <p class="text-2xl font-semibold text-gray-800">86h</p>
+            <p class="text-sm text-red-600 mt-2">↓ 8% vs last month</p>
+        </div>
+
+        <div class="p-6 border border-neutral-200/20 rounded-lg">
+            <div class="flex items-center justify-between mb-4">
+                <h3 class="text-sm font-medium text-gray-500">Time Zones</h3>
+                <span class="text-green-600">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"/>
+                    </svg>
+                </span>
+            </div>
+            <p class="text-2xl font-semibold text-gray-800">6</p>
+            <p class="text-sm text-gray-600 mt-2">Most active: GMT+1</p>
+        </div>
+
+        <div class="p-6 border border-neutral-200/20 rounded-lg">
+            <div class="flex items-center justify-between mb-4">
+                <h3 class="text-sm font-medium text-gray-500">Completion Rate</h3>
+                <span class="text-yellow-600">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                </span>
+            </div>
+            <p class="text-2xl font-semibold text-gray-800">92%</p>
+            <p class="text-sm text-green-600 mt-2">↑ 3% vs last month</p>
+        </div>
+    </div>
+
+    <!-- Activity Chart -->
+    <div class="mb-8">
+        <h3 class="text-lg font-medium text-gray-800 mb-4">Event Distribution</h3>
+        <div class="border border-neutral-200/20 rounded-lg p-4">
+            <div class="h-64 w-full bg-gray-50 rounded-lg flex items-end justify-between px-4">
+                <div class="h-[60%] w-8 bg-blue-500 rounded-t-lg"></div>
+                <div class="h-[75%] w-8 bg-blue-500 rounded-t-lg"></div>
+                <div class="h-[45%] w-8 bg-blue-500 rounded-t-lg"></div>
+                <div class="h-[90%] w-8 bg-blue-500 rounded-t-lg"></div>
+                <div class="h-[55%] w-8 bg-blue-500 rounded-t-lg"></div>
+                <div class="h-[70%] w-8 bg-blue-500 rounded-t-lg"></div>
+                <div class="h-[40%] w-8 bg-blue-500 rounded-t-lg"></div>
+            </div>
+            <div class="flex justify-between px-4 mt-4 text-sm text-gray-600">
+                <span>Mon</span>
+                <span>Tue</span>
+                <span>Wed</span>
+                <span>Thu</span>
+                <span>Fri</span>
+                <span>Sat</span>
+                <span>Sun</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Event Types -->
+    <div class="mb-8">
+        <h3 class="text-lg font-medium text-gray-800 mb-4">Event Types</h3>
+        <div class="border border-neutral-200/20 rounded-lg p-4">
+            <div class="space-y-4">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center">
+                        <div class="w-3 h-3 bg-blue-500 rounded-full mr-3"></div>
+                        <span class="text-gray-600">Meetings</span>
+                    </div>
+                    <span class="text-gray-800 font-medium">45%</span>
+                </div>
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center">
+                        <div class="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
+                        <span class="text-gray-600">Personal</span>
+                    </div>
+                    <span class="text-gray-800 font-medium">30%</span>
+                </div>
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center">
+                        <div class="w-3 h-3 bg-purple-500 rounded-full mr-3"></div>
+                        <span class="text-gray-600">Reminders</span>
+                    </div>
+                    <span class="text-gray-800 font-medium">25%</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Export Section -->
+    <div class="flex justify-end">
+        <button class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200 flex items-center space-x-2">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+            </svg>
+            <span>Export Report</span>
+        </button>
+    </div>
+</section>
+</htmlCode></element><element id="5ccaed78-5902-4339-ad99-9a2fe1fca972" data-section-id="5ccaed78-5902-4339-ad99-9a2fe1fca972">
+
+<htmlCode>
+<section id="subscription" class="p-6 bg-white rounded-lg border border-neutral-200/20">
+    <!-- Subscription Header -->
+    <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-800">Choose Your Plan</h2>
+        <p class="text-gray-600 mt-2">Select the perfect plan for your scheduling needs</p>
+    </div>
+
+    <!-- Pricing Toggle -->
+    <div class="flex justify-center items-center space-x-4 mb-12">
+        <span class="text-gray-600">Monthly</span>
+        <button class="relative inline-flex h-6 w-11 items-center rounded-full bg-blue-600">
+            <span class="translate-x-6 inline-block h-4 w-4 transform rounded-full bg-white transition"></span>
+        </button>
+        <span class="text-gray-600">Annually <span class="text-green-500 text-sm">(Save 20%)</span></span>
+    </div>
+
+    <!-- Pricing Cards -->
+    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <!-- Free Plan -->
+        <div class="border border-neutral-200/20 rounded-xl p-8">
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold text-gray-800">Free</h3>
+                <p class="text-gray-600 mt-2">Basic features for personal use</p>
+            </div>
+            <div class="mb-6">
+                <span class="text-4xl font-bold text-gray-800">$0</span>
+                <span class="text-gray-600">/month</span>
+            </div>
+            <ul class="space-y-4 mb-8">
+                <li class="flex items-center">
+                    <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span class="text-gray-600">Basic Calendar Features</span>
+                </li>
+                <li class="flex items-center">
+                    <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span class="text-gray-600">Up to 3 Time Zones</span>
+                </li>
+                <li class="flex items-center">
+                    <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span class="text-gray-600">Basic Event Management</span>
+                </li>
+            </ul>
+            <button class="w-full px-6 py-3 text-blue-600 border border-blue-600 rounded-lg hover:bg-blue-50 transition-colors duration-200">
+                Get Started
+            </button>
+        </div>
+
+        <!-- Pro Plan -->
+        <div class="border-2 border-blue-600 rounded-xl p-8 relative">
+            <div class="absolute top-0 right-8 transform -translate-y-1/2">
+                <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm">Popular</span>
+            </div>
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold text-gray-800">Pro</h3>
+                <p class="text-gray-600 mt-2">Advanced features for professionals</p>
+            </div>
+            <div class="mb-6">
+                <span class="text-4xl font-bold text-gray-800">$9.99</span>
+                <span class="text-gray-600">/month</span>
+            </div>
+            <ul class="space-y-4 mb-8">
+                <li class="flex items-center">
+                    <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span class="text-gray-600">All Free Features</span>
+                </li>
+                <li class="flex items-center">
+                    <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span class="text-gray-600">Unlimited Time Zones</span>
+                </li>
+                <li class="flex items-center">
+                    <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span class="text-gray-600">Custom Reminders</span>
+                </li>
+                <li class="flex items-center">
+                    <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span class="text-gray-600">Priority Support</span>
+                </li>
+            </ul>
+            <button class="w-full px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200">
+                Upgrade Now
+            </button>
+        </div>
+
+        <!-- Enterprise Plan -->
+        <div class="border border-neutral-200/20 rounded-xl p-8">
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold text-gray-800">Enterprise</h3>
+                <p class="text-gray-600 mt-2">Custom solutions for teams</p>
+            </div>
+            <div class="mb-6">
+                <span class="text-4xl font-bold text-gray-800">$29.99</span>
+                <span class="text-gray-600">/month</span>
+            </div>
+            <ul class="space-y-4 mb-8">
+                <li class="flex items-center">
+                    <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span class="text-gray-600">All Pro Features</span>
+                </li>
+                <li class="flex items-center">
+                    <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span class="text-gray-600">Team Management</span>
+                </li>
+                <li class="flex items-center">
+                    <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span class="text-gray-600">Advanced Analytics</span>
+                </li>
+                <li class="flex items-center">
+                    <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span class="text-gray-600">24/7 Support</span>
+                </li>
+            </ul>
+            <button class="w-full px-6 py-3 text-blue-600 border border-blue-600 rounded-lg hover:bg-blue-50 transition-colors duration-200">
+                Contact Sales
+            </button>
+        </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="mt-16">
+        <h3 class="text-xl font-semibold text-gray-800 mb-6">Frequently Asked Questions</h3>
+        <div class="space-y-4">
+            <div class="border border-neutral-200/20 rounded-lg p-4">
+                <button class="flex justify-between items-center w-full">
+                    <span class="font-medium text-gray-800">How does the billing cycle work?</span>
+                    <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="border border-neutral-200/20 rounded-lg p-4">
+                <button class="flex justify-between items-center w-full">
+                    <span class="font-medium text-gray-800">Can I change plans anytime?</span>
+                    <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="border border-neutral-200/20 rounded-lg p-4">
+                <button class="flex justify-between items-center w-full">
+                    <span class="font-medium text-gray-800">What payment methods do you accept?</span>
+                    <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+</htmlCode></element>
+            <div id="page_complete">
+            <script>
+                console.log('Page complete');
+            </script>
+            </body>
+            </html>
+          
