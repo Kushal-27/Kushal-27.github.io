@@ -1,173 +1,137 @@
-import React from "react";
+<!-- Static HTML Portfolio Page for GitHub Pages -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kushal Sharma Poudel — Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+</head>
 
-// General-purpose portfolio single-file React component (Tailwind + shadcn/ui + Framer Motion compatible)
-// Ready to drop into a React app. Focuses on a broad developer profile (backend, payments, infra, and web).
-
-export default function Portfolio() {
-  return (
-    <div className="min-h-screen bg-gray-50 text-gray-900 antialiased">
-      <header className="bg-white shadow-sm">
-        <div className="max-w-5xl mx-auto px-6 py-6 flex items-center justify-between">
-          <div className="flex items-center gap-4">
-            <div className="w-12 h-12 rounded-full bg-gradient-to-tr from-indigo-500 to-pink-500 flex items-center justify-center text-white font-bold">KP</div>
-            <div>
-              <h1 className="text-lg font-semibold">Kushal Sharma Poudel</h1>
-              <p className="text-sm text-gray-500">Software Engineer — Backend · Payments · Distributed Systems</p>
-            </div>
-          </div>
-
-          <nav className="flex items-center gap-4 text-sm">
-            <a href="#about" className="hover:underline">About</a>
-            <a href="#work" className="hover:underline">Work</a>
-            <a href="#projects" className="hover:underline">Projects</a>
-            <a href="#skills" className="hover:underline">Skills</a>
-            <a href="#contact" className="hover:underline">Contact</a>
-            <a href="/KushalSharmaPoudel_Resume.pdf" download className="ml-4 inline-block px-3 py-1.5 border border-gray-200 rounded-md text-sm">Download Resume</a>
-          </nav>
+<body class="bg-gray-50 text-gray-900 antialiased">
+  <!-- Header -->
+  <header class="bg-white shadow-sm">
+    <div class="max-w-5xl mx-auto px-6 py-6 flex items-center justify-between">
+      <div class="flex items-center gap-4">
+        <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-indigo-500 to-pink-500 flex items-center justify-center text-white font-bold">KP</div>
+        <div>
+          <h1 class="text-lg font-semibold">Kushal Sharma Poudel</h1>
+          <p class="text-sm text-gray-500">Software Engineer — Backend · Payments · Distributed Systems</p>
         </div>
-      </header>
+      </div>
 
-      <main className="max-w-5xl mx-auto px-6 py-12 grid gap-12">
-        {/* Hero */}
-        <section className="rounded-2xl p-8 shadow-sm grid lg:grid-cols-2 gap-8 items-center bg-white">
-          <div>
-            <h2 className="text-3xl md:text-4xl font-extrabold leading-tight">Building reliable systems and delightful developer experiences</h2>
-            <p className="mt-4 text-gray-600">I design and implement backend systems, APIs, and infrastructure for high-throughput services. I enjoy working across the stack — from secure payments and message processing to developer tooling and observability.</p>
-
-            <div className="mt-6 flex flex-wrap gap-3">
-              <a href="#projects" className="px-4 py-2 bg-indigo-600 text-white rounded-md text-sm">See my work</a>
-              <a href="mailto:kushalpoudel2058@gmail.com" className="px-4 py-2 border border-gray-200 rounded-md text-sm">Contact me</a>
-            </div>
-
-            <div className="mt-6 text-sm text-gray-500">Based in Kathmandu, Nepal • Available for remote or on-site work</div>
-          </div>
-
-          <div className="rounded-lg p-6 bg-gray-50 border border-gray-100">
-            <h3 className="font-semibold">Quick snapshot</h3>
-            <ul className="mt-3 space-y-2 text-sm text-gray-700">
-              <li>• 2+ years building backend systems, integrations, and financial messaging.</li>
-              <li>• Strong experience with Java, Spring, Netty, and ISO8583 style protocols.</li>
-              <li>• Operationally-minded: containers, monitoring, incident response and automation.</li>
-              <li>• Open-source contributions and sample projects on GitHub.</li>
-            </ul>
-          </div>
-        </section>
-
-        {/* About */}
-        <section id="about" className="bg-white rounded-2xl p-8 shadow-sm">
-          <h3 className="text-xl font-semibold">About me</h3>
-          <p className="mt-3 text-gray-600">I’m a systems-focused software engineer who enjoys solving hard problems in payments, integrations, and distributed systems. I focus on reliability, security, and clean APIs — and I like to make developer experiences better by shipping small, well-tested tools and libraries.</p>
-
-          <div className="mt-4 grid sm:grid-cols-2 gap-4 text-sm text-gray-700">
-            <div>
-              <strong>Role fit</strong>
-              <div className="text-gray-600">Backend Engineer, Payments Engineer, Platform Engineer</div>
-            </div>
-            <div>
-              <strong>Interests</strong>
-              <div className="text-gray-600">Payments, security, low-latency systems, developer tools, observability</div>
-            </div>
-            <div>
-              <strong>Education</strong>
-              <div className="text-gray-600">BSc (Hons) Computer Science — Herald College</div>
-            </div>
-            <div>
-              <strong>Contact</strong>
-              <div className="text-gray-600">kushalpoudel2058@gmail.com • Kathmandu, Nepal</div>
-            </div>
-          </div>
-        </section>
-
-        {/* Work */}
-        <section id="work" className="bg-white rounded-2xl p-8 shadow-sm">
-          <h3 className="text-xl font-semibold">Work experience</h3>
-          <div className="mt-4 space-y-6">
-            <article>
-              <h4 className="font-semibold">Software Engineer — imark digital Pvt. Ltd <span className="text-sm text-gray-500">(May 2025 - Present)</span></h4>
-              <p className="text-gray-600 mt-1 text-sm">Part of the payments team building transaction routing, message handling and integrations with secure components. Focus on reliability, monitoring and secure key handling when required.</p>
-            </article>
-
-            <article>
-              <h4 className="font-semibold">Associate Software Engineer — Hamro Patro Inc. <span className="text-sm text-gray-500">(Mar 2024 - Feb 2025)</span></h4>
-              <p className="text-gray-600 mt-1 text-sm">Worked on ACH reconciliation, simulators for testing, and backend systems for remittances. Improved reconciliation accuracy and testing speed through automation.</p>
-            </article>
-
-            <article>
-              <h4 className="font-semibold">Software Development Fellowship — Hamro Patro Inc. <span className="text-sm text-gray-500">(Sep 2023 - Mar 2024)</span></h4>
-              <p className="text-gray-600 mt-1 text-sm">Hands-on training in building production features, observability and deployment practices while collaborating cross-functionally.</p>
-            </article>
-          </div>
-        </section>
-
-        {/* Projects */}
-        <section id="projects" className="bg-white rounded-2xl p-8 shadow-sm">
-          <h3 className="text-xl font-semibold">Projects & highlights</h3>
-          <div className="mt-4 grid md:grid-cols-2 gap-4">
-            <div className="p-4 border rounded-md">
-              <h4 className="font-semibold">Payments & Integrations</h4>
-              <p className="text-sm text-gray-600 mt-1">Integrations with banks, POS, and HSMs. Secure message handling, key flows, PIN processing and end-to-end testing harnesses.</p>
-              <div className="mt-3 text-xs text-gray-500">Tech: Java, Netty, ISO8583, HSM, Docker</div>
-            </div>
-
-            <div className="p-4 border rounded-md">
-              <h4 className="font-semibold">Backend Tools & Automation</h4>
-              <p className="text-sm text-gray-600 mt-1">Developed internal tools and simulators to speed up testing, reduce manual steps and increase deployment confidence.</p>
-              <div className="mt-3 text-xs text-gray-500">Tech: Spring Boot, Micronaut, Kafka/NATS</div>
-            </div>
-
-            <div className="p-4 border rounded-md">
-              <h4 className="font-semibold">Open-source / Samples</h4>
-              <p className="text-sm text-gray-600 mt-1">Reusable libraries and sample projects demonstrating ISO parsing, message routing, and small utilities for observability.</p>
-              <div className="mt-3 text-xs text-gray-500">Tech: Java, GitHub</div>
-            </div>
-
-            <div className="p-4 border rounded-md">
-              <h4 className="font-semibold">Data & Reconciliation</h4>
-              <p className="text-sm text-gray-600 mt-1">Complex reconciliation pipelines and reporting for ACH/remittance flows with strong test coverage.</p>
-              <div className="mt-3 text-xs text-gray-500">Tech: PostgreSQL, SQL, Python</div>
-            </div>
-          </div>
-        </section>
-
-        {/* Skills */}
-        <section id="skills" className="bg-white rounded-2xl p-8 shadow-sm">
-          <h3 className="text-xl font-semibold">Skills & technologies</h3>
-          <div className="mt-4 flex flex-wrap gap-3">
-            {[
-              'Java', 'Spring Boot', 'Micronaut', 'ISO8583', 'HSM', 'TCP', 'Netty', 'PostgreSQL', 'Scylla', 'Redis', 'Docker', 'gRPC', 'NATS', 'Observability', 'Security'
-            ].map((s) => (
-              <span key={s} className="px-3 py-1 border rounded-full text-sm text-gray-700">{s}</span>
-            ))}
-          </div>
-        </section>
-
-        {/* Contact */}
-        <section id="contact" className="bg-white rounded-2xl p-8 shadow-sm">
-          <h3 className="text-xl font-semibold">Contact</h3>
-          <div className="mt-4 grid sm:grid-cols-2 gap-6">
-            <div>
-              <p className="text-gray-600">I’m open to new projects and roles across backend, payments, and platform engineering. Reach me at:</p>
-              <ul className="mt-3 text-sm text-gray-700 space-y-2">
-                <li><strong>Email:</strong> <a href="mailto:kushalpoudel2058@gmail.com" className="text-indigo-600">kushalpoudel2058@gmail.com</a></li>
-                <li><strong>Phone:</strong> 9865472234</li>
-                <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/kushal-sharma-poudel-325a74187" className="text-indigo-600">linkedin.com/in/kushal-sharma-poudel-325a74187</a></li>
-                <li><strong>GitHub:</strong> <a href="https://github.com/Kushal-27" className="text-indigo-600">github.com/Kushal-27</a></li>
-              </ul>
-            </div>
-
-            <div>
-              <form action="mailto:kushalpoudel2058@gmail.com" method="post" encType="text/plain" className="space-y-3">
-                <input name="name" placeholder="Your name" className="w-full border rounded-md px-3 py-2 text-sm" />
-                <input name="email" placeholder="Your email" className="w-full border rounded-md px-3 py-2 text-sm" />
-                <textarea name="message" placeholder="Message" className="w-full border rounded-md px-3 py-2 text-sm h-28" />
-                <button type="submit" className="inline-block px-4 py-2 bg-indigo-600 text-white rounded-md text-sm">Send</button>
-              </form>
-            </div>
-          </div>
-        </section>
-
-        <footer className="py-8 text-center text-sm text-gray-500">Built with ❤️ · Kushal Sharma Poudel · Kathmandu, Nepal</footer>
-      </main>
+      <nav class="flex items-center gap-4 text-sm">
+        <a href="#about" class="hover:underline">About</a>
+        <a href="#work" class="hover:underline">Work</a>
+        <a href="#projects" class="hover:underline">Projects</a>
+        <a href="#skills" class="hover:underline">Skills</a>
+        <a href="#contact" class="hover:underline">Contact</a>
+        <a href="KushalSharmaPoudel_Resume.pdf" download class="ml-4 inline-block px-3 py-1.5 border border-gray-200 rounded-md text-sm">Download Resume</a>
+      </nav>
     </div>
-  );
-}
+  </header>
+
+  <main class="max-w-5xl mx-auto px-6 py-12 grid gap-12">
+    <!-- Hero -->
+    <section class="rounded-2xl p-8 shadow-sm grid lg:grid-cols-2 gap-8 items-center bg-white">
+      <div>
+        <h2 class="text-3xl md:text-4xl font-extrabold leading-tight">Building reliable systems and delightful developer experiences</h2>
+        <p class="mt-4 text-gray-600">I design and implement backend systems, APIs, and infrastructure for high-throughput services. I enjoy working across the stack — from secure payments and message processing to developer tooling and observability.</p>
+
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="#projects" class="px-4 py-2 bg-indigo-600 text-white rounded-md text-sm">See my work</a>
+          <a href="mailto:kushalpoudel2058@gmail.com" class="px-4 py-2 border border-gray-200 rounded-md text-sm">Contact me</a>
+        </div>
+
+        <div class="mt-6 text-sm text-gray-500">Based in Kathmandu, Nepal • Available for remote or on-site work</div>
+      </div>
+
+      <div class="rounded-lg p-6 bg-gray-50 border border-gray-100">
+        <h3 class="font-semibold">Quick snapshot</h3>
+        <ul class="mt-3 space-y-2 text-sm text-gray-700">
+          <li>• 4+ years building backend systems, integrations, and financial messaging.</li>
+          <li>• Strong experience with Java, Spring, Netty, and ISO8583 style protocols.</li>
+          <li>• Operationally-minded: containers, monitoring, incident response and automation.</li>
+          <li>• Open-source contributions and sample projects on GitHub.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="bg-white rounded-2xl p-8 shadow-sm">
+      <h3 class="text-xl font-semibold">About me</h3>
+      <p class="mt-3 text-gray-600">I’m a systems-focused software engineer who enjoys solving hard problems in payments, integrations, and distributed systems. I focus on reliability, security, and clean APIs — and I like to make developer experiences better by shipping small, well-tested tools and libraries.</p>
+
+      <div class="mt-4 grid sm:grid-cols-2 gap-4 text-sm text-gray-700">
+        <div>
+          <strong>Role fit</strong>
+          <div class="text-gray-600">Backend Engineer, Payments Engineer, Platform Engineer</div>
+        </div>
+        <div>
+          <strong>Interests</strong>
+          <div class="text-gray-600">Payments, security, low-latency systems, developer tools, observability</div>
+        </div>
+        <div>
+          <strong>Education</strong>
+          <div class="text-gray-600">BSc (Hons) Computer Science — Herald College</div>
+        </div>
+        <div>
+          <strong>Contact</strong>
+          <div class="text-gray-600">kushalpoudel2058@gmail.com • Kathmandu, Nepal</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work -->
+    <section id="work" class="bg-white rounded-2xl p-8 shadow-sm">
+      <h3 class="text-xl font-semibold">Work experience</h3>
+      <div class="mt-4 space-y-6">
+        <article>
+          <h4 class="font-semibold">Software Engineer — imark digital Pvt. Ltd <span class="text-sm text-gray-500">(May 2025 - Present)</span></h4>
+          <p class="text-gray-600 mt-1 text-sm">Part of the payments team building transaction routing, message handling and integrations with secure components. Focus on reliability, monitoring and secure key handling when required.</p>
+        </article>
+
+        <article>
+          <h4 class="font-semibold">Associate Software Engineer — Hamro Patro Inc. <span class="text-sm text-gray-500">(Mar 2024 - Feb 2025)</span></h4>
+          <p class="text-gray-600 mt-1 text-sm">Worked on ACH reconciliation, simulators for testing, and backend systems for remittances. Improved reconciliation accuracy and testing speed through automation.</p>
+        </article>
+
+        <article>
+          <h4 class="font-semibold">Software Development Fellowship — Hamro Patro Inc. <span class="text-sm text-gray-500">(Sep 2023 - Mar 2024)</span></h4>
+          <p class="text-gray-600 mt-1 text-sm">Hands-on training in building production features, observability and deployment practices while collaborating cross-functionally.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="bg-white rounded-2xl p-8 shadow-sm">
+      <h3 class="text-xl font-semibold">Projects & highlights</h3>
+      <div class="mt-4 grid md:grid-cols-2 gap-4">
+        <div class="p-4 border rounded-md">
+          <h4 class="font-semibold">Payments & Integrations</h4>
+          <p class="text-sm text-gray-600 mt-1">Integrations with banks, POS, and HSMs. Secure message handling, key flows, PIN processing and end-to-end testing harnesses.</p>
+          <div class="mt-3 text-xs text-gray-500">Tech: Java, Netty, ISO8583, HSM, Docker</div>
+        </div>
+
+        <div class="p-4 border rounded-md">
+          <h4 class="font-semibold">Backend Tools & Automation</h4>
+          <p class="text-sm text-gray-600 mt-1">Developed internal tools and simulators to speed up testing, reduce manual steps and increase deployment confidence.</p>
+          <div class="mt-3 text-xs text-gray-500">Tech: Spring Boot, Micronaut, Kafka/NATS</div>
+        </div>
+
+        <div class="p-4 border rounded-md">
+          <h4 class="font-semibold">Open-source / Samples</h4>
+          <p class="text-sm text-gray-600 mt-1">Reusable libraries and sample projects demonstrating ISO parsing, message routing, and small utilities for observability.</p>
+          <div class="mt-3 text-xs text-gray-500">Tech: Java, GitHub</div>
+        </div>
+
+        <div class="p-4 border rounded-md">
+          <h4 class="font-semibold">Data & Reconciliation</h4>
+          <p class="text-sm text-gray-600 mt-1">Complex reconciliation pipelines and reporting for ACH/remittance flows with strong test coverage.</p>
+          <div class="mt-3 text-xs text-gray-500">Tech: PostgreSQL, SQL, Python</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="bg-white rounded-2xl p-8 shadow-sm">
